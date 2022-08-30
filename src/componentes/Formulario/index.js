@@ -29,14 +29,14 @@ const Formulario = (props) => {
     return (
         <section className="formulario">
             <form onSubmit={aoSalvar}>
-                <h2>Preencha os dados para criar o card do colaborador:</h2>
+                <h2>Preencha os dados para criar o card do Professor:</h2>
                 <CampoTexto obrigatorio={true} label="Nome do Professor:" placeholder="Digite seu nome" valor={nome} aoAlterado={valor => setNome(valor)}/>
 
                 <CampoTexto obrigatorio={true} label="Matéria:" placeholder="Digite o seu cargo" valor={cargo} aoAlterado={valor => setCargo(valor)}/>
 
                 <CampoTexto label="Foto do professor:" placeholder="Digite o endereço da imagem" valor={imagem} aoAlterado={valor => setImagem(valor)}/>
 
-                <ListaSuspensa obrigatorio={true} label="Qual tipo de programador você é?" itens={props.times} valor={time} aoAlterado={valor => setTime(valor)}/>
+                <ListaSuspensa obrigatorio={true} label="Escolha o Time:" itens={props.times} valor={time} aoAlterado={valor => setTime(valor)}/>
 
                 <Botao texto="Criar card"/>
             </form>
